@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "es2022",
+    "lib": ["es2022"],
+    "moduleDetection": "force",
+
+    /* Modules */
+    "module": "commonjs",
+    // "rootDir": "./",
+    "baseUrl": "./src",
+    "paths": {
+      "@core/*": ["./core/*"],
+      "@http/*": ["./http/*"],
+      "@infra/*": ["./infra/*"],
+    },
+    "resolveJsonModule": true,
+
+    /* JavaScript Support */
+    "allowJs": true,
+
+    /* Emit */
+
+    /* Interop Constraints */
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Type Checking */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+
+    /* Completeness */
+    "skipLibCheck": true
+  }
+}
