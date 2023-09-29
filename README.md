@@ -12,10 +12,9 @@
 
 - [x] Simplicity and flexibility.
 - [x] Typescript out-of-box.
-  - [x] Use just the necessary and convenient settings, [see](tsconfig.json).
   - [x] Use [`tsx`](https://github.com/esbuild-kit/tsx) to develop with a blazingly fast hot-reloading.
   - [x] Use [`tsup`](https://github.com/egoist/tsup) to bundle code with no configuration.
-- [x] Path aliases to clean up noisy paths, see [here](docs/path-aliases.md).
+- [x] Path aliases to clean up noisy paths, see [more explanation](docs/path-aliases.md).
 - [x] Tiny and robust web framework, [Koa](https://koajs.com).
   - [x] Equipped with [Koa Router](https://www.npmjs.com/package/koa-router).
 
@@ -24,10 +23,10 @@
 #### 🚧 Not ready yet 🚧
 
 ```bash
-npx create-node-typescript-server
+pnpx create-node-typescript-server # or npx create-node-typescript-server
 ```
 
-#### Traditional approach
+Or
 
 1. Clone the repository
 2. Copy the environment variables
@@ -46,8 +45,9 @@ cp .env.example .env
 pnpm install --frozen-lockfile # or npm ci
 
 # (4)
-# You should write a README for your project
+# You should rewrite the README for your project
 # You should change the "name" in the package.json
+# You probably will need to remove the example files
 ```
 
 ## 🗺 Getting started
