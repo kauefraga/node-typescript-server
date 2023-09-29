@@ -30,8 +30,9 @@ npx create-node-typescript-server
 #### Traditional approach
 
 1. Clone the repository
-2. Install the dependencies
-3. Change some stuff
+2. Copy the environment variables
+3. Install the dependencies
+4. Change some stuff
 
 ```bash
 # (1)
@@ -39,9 +40,12 @@ git clone https://github.com/kauefraga/node-typescript-server.git {your-project-
 cd {your-project-name}
 
 # (2)
-pnpm install --frozen-lockfile # or npm ci
+cp .env.example .env
 
 # (3)
+pnpm install --frozen-lockfile # or npm ci
+
+# (4)
 # You should write a README for your project
 # You should change the "name" in the package.json
 ```
@@ -61,12 +65,31 @@ I highly recommend you to read those resources:
 
 Look at [the .env.example](.env.example).
 
+- `PORT`: the HTTP server port number (default: 3333).
+
 > [!NOTE]
 > Currently, i am using Node 18.17.1, therefore i choose `dotenv` package to load environment variables because it's the most stable solution. If you are reading it in the future (20.8.x LTS or above), consider removing `dotenv` and using [`node --env-file=.env`](https://nodejs.org/api/cli.html#--env-fileconfig).
 
+## 🏗 Architecture and codebase
+
+It's a monolithic application and you should keep it like that for this boilerplate.
+
+Below you can see an explanation of the codebase:
+
+- `src` - It's where our code lives.
+  - `core` - Specifications and business rules will be here.
+  - `http` - The HTTP thing (server, API, ...) will go here.
+  - `infra` - Infrastructure stuff, such as database, migrations, cache...
+- `core/domain`
+  - `entities/models/schemas` - Definitions of our entities (User, Book, Post, Pet, etc...).
+  - `repositories` - Interfaces and implementations of repositories.
+  - `usecases` - Use cases of our application.
+
 ## ⭐ Recommendations
 
-- I suggest you to write git commit messages following [Gitmoji](https://github.com/carloscuesta/gitmoji) and [Conventional Commits](https://www.conventionalcommits.org).
+The following list has some suggestions, remember that you don't need to follow them strictly, as the codebase specifications.
+
+- I suggest you to write git commit messages following [Gitmoji](https://github.com/carloscuesta/gitmoji) and/or [Conventional Commits](https://www.conventionalcommits.org).
 - Also, configure a linter to make your codebase more consistent. Here's [a guide for eslint setup](docs/eslint.md).
 
 <!-- fazer/procurar um middleware simples de limite de requisições
