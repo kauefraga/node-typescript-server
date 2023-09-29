@@ -70,6 +70,17 @@ Look at [the .env.example](.env.example).
 > [!NOTE]
 > Currently, i am using Node 18.17.1, therefore i choose `dotenv` package to load environment variables because it's the most stable solution. If you are reading it in the future (20.8.x LTS or above), consider removing `dotenv` and using [`node --env-file=.env`](https://nodejs.org/api/cli.html#--env-fileconfig).
 
+### Unit Tests
+
+Run tests:
+
+```bash
+pnpm test # or npm run test
+```
+
+Look at [the vitest config](vitest.config.ts).
+Powered by [Vitest](https://vitest.dev).
+
 ## 🏗 Architecture and codebase
 
 It's a monolithic application and you should keep it like that for this boilerplate.
@@ -84,6 +95,10 @@ Below you can see an explanation of the codebase:
   - `entities/models/schemas` - Definitions of our entities (User, Book, Post, Pet, etc...).
   - `repositories` - Interfaces and implementations of repositories.
   - `usecases` - Use cases of our application.
+
+Where is the test folder?? You will see the tests right next of their definition/implementation.
+
+Look at [the source code](src).
 
 ## ⭐ Recommendations
 
