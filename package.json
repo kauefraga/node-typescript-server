@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsup src/",
     "start": "node .",
-    "dev": "tsx src/http/server.ts",
+    "dev": "tsx watch src/http/server.ts",
     "test": "vitest",
     "lint": "eslint src/ --ext .ts"
   },
