@@ -10,7 +10,7 @@ export class Book {
   private props: BookProps;
 
   constructor(props: BookProps) {
-    this.props = props
+    this.props = props;
 
     if (!this.props.id) {
       this.props.id = randomUUID();
