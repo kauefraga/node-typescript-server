@@ -1,6 +1,7 @@
 # Node Typescript Server
 
 ![GitHub top language](https://img.shields.io/github/languages/top/kauefraga/node-typescript-server)
+![NPM downloads](https://img.shields.io/npm/dm/create-node-typescript-server)
 ![GitHub's license](https://img.shields.io/github/license/kauefraga/node-typescript-server)
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/kauefraga/node-typescript-server/main)
 
@@ -19,8 +20,6 @@
   - [x] Equipped with [Koa Router](https://www.npmjs.com/package/koa-router).
 
 ## ⬇ How to install it
-
-#### 🚧 Not ready yet 🚧
 
 ```bash
 pnpx create-node-typescript-server # or npx create-node-typescript-server
@@ -106,6 +105,7 @@ The following list has some suggestions, remember that you don't need to follow 
 
 - I suggest you to write git commit messages following [Gitmoji](https://github.com/carloscuesta/gitmoji) and/or [Conventional Commits](https://www.conventionalcommits.org).
 - Also, configure a linter to make your codebase more consistent. Here's [a guide for eslint setup](docs/eslint.md).
+- Type `npx create-node-typescript-server` on your terminal and hit enter 🧞‍♂️
 
 <!-- fazer/procurar um middleware simples de limite de requisições
 
